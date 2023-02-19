@@ -17,7 +17,9 @@ Let's build a todo app. We've already got an in-memory database set up in `src/l
 	</label>
 </form>+++
 
-{#each data.todos as todo}
+<ul>
+	{#each data.todos as todo}
+		// ...
 ```
 
 If we type something into the `<input>` and hit Enter, the browser makes a POST request (because of the `method="POST"` attribute) to the current page. But that results in an error, because we haven't created a server-side _action_ to handle the POST request. Let's do that now:
